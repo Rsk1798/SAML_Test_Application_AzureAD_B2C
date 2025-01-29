@@ -17,6 +17,10 @@ builder.Services.Configure<AzureAdB2CSettings>(builder.Configuration.GetSection(
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddHealthChecks();
+
+var metadataUri = builder.Configuration["AzureAdB2C:MetadataUri"];
+
 builder.Services.AddSaml2();
 builder.Services.AddScoped<Saml2Configuration>(serviceProvider =>
 {
@@ -69,6 +73,9 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+
+app.MapHealthChecks("/health");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

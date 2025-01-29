@@ -14,6 +14,7 @@ namespace SAML_Test_Application_AzureAD_B2C.Controllers
         private readonly Saml2Configuration config;
         private readonly SamlSettings _samlSettings;
 
+
         //public IActionResult Index()
         //{
         //    return View();

@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    #image: your-app-name
+    image: SAML_Test_Application_AzureAD_B2C
+    build: .
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - PORT=8080
+    ports:
+      - "8080:8080"
