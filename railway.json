@@ -1,0 +1,11 @@
+{
+    "builds": [
+        {
+            "src": "./Dockerfile",
+            "use": "@railway/rails-docker"
+        }
+    ],
+    "env": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
+    }
+}
