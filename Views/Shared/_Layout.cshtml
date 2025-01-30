@@ -28,13 +28,21 @@
 
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <a asp-controller="Saml" asp-action="Logout">Logout</a>
-                            <a asp-controller="Home" asp-action="Logout">Logout</a>
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a asp-controller="Saml" asp-action="Logout">Logout</a>
+                                </li>
+                            </ul>
+                            @* <a asp-controller="Home" asp-action="Logout">Logout</a> *@
                         }
                         else
                         {
-                            <a asp-controller="Saml" asp-action="Login">Login</a>
-                            <a asp-controller="Home" asp-action="Login">Login</a>
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a asp-controller="Saml" asp-action="Login">Login</a>
+                                </li>
+                            </ul>
+                            @* <a asp-controller="Home" asp-action="Login">Login</a> *@
                         }
 
                         @* <li class="nav-item"> *@
