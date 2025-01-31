@@ -34,7 +34,7 @@ namespace SAML_Test_Application_AzureAD_B2C.Controllers
             var binding = new Saml2RedirectBinding();
             var saml2AuthnRequest = new Saml2AuthnRequest(config)
             {
-                AssertionConsumerServiceUrl = new Uri("https://samltestapplicationazureadb2-production.up.railway.app/saml/acs"),
+                AssertionConsumerServiceUrl = new Uri("https://hcliamtrainingb2c.onmicrosoft.com/samltestapplicationazureadb2-production.up.railway.app/saml/acs"),
                 // "https://your-app-url/Auth/ACS"
                 ForceAuthn = true,
             };
