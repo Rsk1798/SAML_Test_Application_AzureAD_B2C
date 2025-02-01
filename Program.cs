@@ -35,7 +35,7 @@ builder.Services.AddScoped<Saml2Configuration>(serviceProvider =>
 {
     var config = new Saml2Configuration
     {
-        Issuer = "https://samltestapplicationazureadb2-production.up.railway.app", // Your app's Entity ID
+        Issuer = "https://hcliamtrainingb2c.onmicrosoft.com/samltestapplicationazureadb2-production.up.railway.app", // Your app's Entity ID
         SingleSignOnDestination = new Uri("https://hcliamtrainingb2c.b2clogin.com/hcliamtrainingb2c.onmicrosoft.com/B2C_1A_RAJA_SAML_SIGNUP_SIGNIN/samlp/sso/login"),
         SignatureAlgorithm = Saml2SecurityAlgorithms.RsaSha256Signature,
         CertificateValidationMode = System.ServiceModel.Security.X509CertificateValidationMode.None,
